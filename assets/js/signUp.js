@@ -31,7 +31,7 @@ function validateName(){
 
 
 	name = document.getElementById("name").value;
-	testName = /^[A-Za-z]{3,20}$/;
+	testName = /^[A-Za-z]{3,250}$/;
 
 	if(!(testName.test(name)) || name=="")
 	{
@@ -153,4 +153,26 @@ function validatePassword(){
 
 
 	}
+}
+
+
+function placeHolder(id,value)
+{
+
+	if(id=="name" && value!="")
+		document.getElementById("placeholderName").style.display="none";
+	else if(id=="name" && value=="")
+		document.getElementById("placeholderName").style.display="block";
+	else if(id=="mail" && value!="")
+		document.getElementById("placeholderMail").style.display="none";
+	else if(id=="mail" && value=="")
+		document.getElementById("placeholderMail").style.display="block";
+	else if(id=="password" && value!="")
+		document.getElementById("placeholderPassword").style.display="none";
+	else if(id=="password" && value=="")
+		document.getElementById("placeholderPassword").style.display="block";
+	else if(id=="confirmPassword" && value!="")
+		document.getElementById("placeholderConfirmPassword").style.display="none";
+	else 
+		document.getElementById("placeholderConfirmPassword").style.display="block";
 }

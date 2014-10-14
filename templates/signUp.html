@@ -53,10 +53,10 @@
 
 					<div id = "registerationFormBody">
 
-						<p class="triangle-isosceles" id="errorMsgName">What's your name?</p>
-						<p class="triangle-isosceles" id="errorMsgMail">What's your email?</p>
-						<p class="triangle-isosceles" id="errorMsgPassword">What's your password?</p>
-						<p class="triangle-isosceles" id="errorMsgConfirmPassword">Please enter matching password</p>
+						<p class="triangleIsosceles" id="errorMsgName">What's your name?</p>
+						<p class="triangleIsosceles" id="errorMsgMail">What's your email?</p>
+						<p class="triangleIsosceles" id="errorMsgPassword">What's your password?</p>
+						<p class="triangleIsosceles" id="errorMsgConfirmPassword">Please enter matching password</p>
 
 						<div id = "formLeftWrapper">
 
@@ -88,7 +88,7 @@
 
 								<span id = "formTitle">Customer Sign Up</span>
 
-								<i class="icon-info-circled"></i>
+								<a href="#"><i class="icon-info-circled"></i></a>
 
 								<form action="">
 
@@ -96,28 +96,43 @@
 										<i class="icon-torso textBoxImg" id="userIcon"></i> 
 										<i class="icon-attention-circled alertImg" id="nameAlert"></i>
 										<span class="textFieldInfo" id="nameTextFieldInfo">Display Name</span>
-										<input type="text" placeholder="Enter Name" class="textField" id="name" onblur="validateName()">
+										<input type="text" class="textField" id="name" onblur="validateName()" oninput = "placeHolder(this.id,this.value)">
+										<label for="name" id="placeholderName">   
+        									<span class="second-letter">Enter Name</span> 
+    									</label>
 									</div>
 
 									<div class="formInput">
 										<i class="icon-email textBoxImg" id="mailIcon"></i>
 										<i class="icon-attention-circled alertImg" id="mailAlert"></i>
 										<span class="textFieldInfo" id="mailTextFieldInfo">Email</span>
-										<input type="email" placeholder="Enter Email" class="textField" id="mail" onblur="validateMail()">
+										<input type="email" class="textField" id="mail" onblur="validateMail()" oninput="placeHolder(this.id,this.value)">
+										<label for="mail" id="placeholderMail">   
+        									<span class="second-letter">Enter Email</span>
+        									<span class="first-letter">*</span> 
+    									</label>
 									</div>
 
 									<div class="formInput">
 										<i class="icon-lock-filled textBoxImg" id="lockIconOne"></i>
 										<i class="icon-attention-circled alertImg" id="passwordAlert"></i>
 										<span class="textFieldInfo" id="passwordTextFieldInfoOne">Password</span>
-										<input type="password" placeholder="Enter Password" class="textField" id="password" onblur="validateFirstPassword()">
+										<input type="password" class="textField" id="password" onblur="validateFirstPassword()" oninput = "placeHolder(this.id,this.value)">
+										<label for="password" id="placeholderPassword">   
+        									<span class="second-letter">Enter Password</span>
+        									<span class="first-letter">*</span> 
+    									</label>
 									</div>
 
 									<div class="formInput">
 										<i class="icon-lock-filled textBoxImg" id="lockIconTwo"></i>
 										<i class="icon-attention-circled alertImg" id="confirmPasswordAlert"></i>
 										<span class="textFieldInfo" id="passwordTextFieldInfoTwo">Confirm Password</span>
-										<input type="password" placeholder="Enter Confirm Password" class="textField" id="confirmPassword" onblur="validatePassword()">
+										<input type="password" class="textField" id="confirmPassword" onblur="validatePassword()" oninput = "placeHolder(this.id,this.value)">
+										<label for="confirmPassword" id="placeholderConfirmPassword">   
+        									<span class="second-letter">Enter Confirm Password</span>
+        									<span class="first-letter">*</span> 
+    									</label>
 									</div>
 
 									<div id="buttonWrapper">
@@ -135,13 +150,13 @@
 							<span id="signInWith">Sign in with social networks</span>
 
 							<div id="socialNetworkLinks">
-								<img src="../assets/images/gplus.png" id="gplusImg">
-								<img src="../assets/images/fb.png" id="fbImg">
-								<img src="../assets/images/twitter.png" id="twitterImg">
+								<a href="#"><img src="../assets/images/gplus.png" id="gplusImg"></a>
+								<a href="#"><img src="../assets/images/fb.png" id="fbImg"></a>
+								<a href="#"><img src="../assets/images/twitter.png" id="twitterImg"></a>
 							</div>
 
 							<div id="termsAndPolicyText">
-								<span id="lighterText">By signing up, you agree to our</span><br><span id="darkerText">Terms of Service</span><span id="lighterText"> and </span><span id="darkerText">Privacy Policy.</span>
+								<span id="lighterText">By signing up, you agree to our</span><br><a href="#">Terms of Service</a><span id="lighterText"> and </span> <a href="#">Privacy Policy.</a>
 							</div>
 
 						</div>
@@ -161,9 +176,9 @@
 				<div id="footerLinks">
 
 					<div id="upperLine">
-						<span>About Us</span>
-						<span>Privacy Policy</span>
-						<span>Terms &#38; Conditions</span>
+						<a href="#">About Us</a>
+						<a href="#">Privacy Policy</a>
+						<a href="#">Terms &#38; Conditions</a>
 					</div>
 
 					<div id="lowerLine">
