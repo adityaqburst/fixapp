@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../assets/css/signUp.css">
+		<link rel="stylesheet" type="text/css" href="../assets/fonts/fontello/css/fontello.css">
+		<script type="text/javascript" src="../assets/js/signUp.js"></script>
+	</head>
+
+	<body>
+
+		<header id="header">
+
+			<div class = "headerWrapper">
+				<div id="leftWrapper">
+					<div id="headerLogo">
+						<img class="pullLeft" src="../assets/images/logo_60.png" height="64px">
+						<span class="pullRight"><label class="logoDescription">FIXAPP</label>
+							<br>
+							<label class="logoCatchLine">What's your Fix</label>
+						</span>
+					</div>
+				</div>
+				<div id="rightWrapper">
+					<div id="topMenu">
+						<ul>
+							<li>HOME</li>
+							<li>DOWNLOAD</li>
+							<li>FAQ</li>
+							<li>CONTACT</li>
+						</ul>
+					</div>
+					
+					<button type="button" id="registerButtonHeader">REGISTER</button>
+				</div>
+			</div>
+
+		</header>
+
+		<div id = "bodyContent">
+
+			<div id = "bodyContentWrapper">
+
+				<p id = "mainContentHeading">Create your account</p>
+
+				<div id = "registerationFormWrapper">
+					
+					<ul>
+							<li>Choose Account :</li>
+							<li id="customer" onclick="selectedTab(this.id)"><a href="#" id="customerLink">Customer<img id="customerImg" src="../assets/images/customer_icon_dark.png" width="24px" height="28px"></a></li>
+							<li id="serviceProvider" onclick="selectedTab(this.id)"><a href="#">Service Provider<img id="serviceProviderImg" src="../assets/images/SP_icon_white.png" width="25px" height="30px"></a></li>
+					</ul>
+
+					<div id = "registerationFormBody">
+
+						<p class="triangle-isosceles" id="errorMsgName">What's your name?</p>
+						<p class="triangle-isosceles" id="errorMsgMail">What's your email?</p>
+						<p class="triangle-isosceles" id="errorMsgPassword">What's your password?</p>
+						<p class="triangle-isosceles" id="errorMsgConfirmPassword">Please enter matching password</p>
+
+						<div id = "formLeftWrapper">
+
+							<span id = "tagLineUpper">How it works?</span>
+
+							<iframe width="426" height="277" id = "videoFrame"
+								src="https://www.youtube.com/embed/JuU0M2xBasc">
+							</iframe>
+
+							<span id = "tagLineLower">What's your fix?</span>
+
+						</div>
+
+						<div id = "formRightWrapper">
+
+							<img src="../assets/images/express_arrow.png" width="21px" height="92px" id="arrowImg">
+
+							<span id="tryItText">Try it now for Free- In 1 easy step</span>
+
+							<div id="ribbon">
+						
+								<span>&lsquo;Express Sign Up&rsquo;</i></span>
+
+							</div>
+
+							<div id="formContent">
+
+								<img src="../assets/images/signup.png" id="formTitleImg">
+
+								<span id = "formTitle">Customer Sign Up</span>
+
+								<i class="icon-info-circled"></i>
+
+								<form action="">
+
+									<div class="formInput">
+										<i class="icon-torso textBoxImg" id="userIcon"></i> 
+										<i class="icon-attention-circled alertImg" id="nameAlert"></i>
+										<span class="textFieldInfo" id="nameTextFieldInfo">Display Name</span>
+										<input type="text" placeholder="Enter Name" class="textField" id="name" onblur="validateName()">
+									</div>
+
+									<div class="formInput">
+										<i class="icon-email textBoxImg" id="mailIcon"></i>
+										<i class="icon-attention-circled alertImg" id="mailAlert"></i>
+										<span class="textFieldInfo" id="mailTextFieldInfo">Email</span>
+										<input type="email" placeholder="Enter Email" class="textField" id="mail" onblur="validateMail()">
+									</div>
+
+									<div class="formInput">
+										<i class="icon-lock-filled textBoxImg" id="lockIconOne"></i>
+										<i class="icon-attention-circled alertImg" id="passwordAlert"></i>
+										<span class="textFieldInfo" id="passwordTextFieldInfoOne">Password</span>
+										<input type="password" placeholder="Enter Password" class="textField" id="password" onblur="validateFirstPassword()">
+									</div>
+
+									<div class="formInput">
+										<i class="icon-lock-filled textBoxImg" id="lockIconTwo"></i>
+										<i class="icon-attention-circled alertImg" id="confirmPasswordAlert"></i>
+										<span class="textFieldInfo" id="passwordTextFieldInfoTwo">Confirm Password</span>
+										<input type="password" placeholder="Enter Confirm Password" class="textField" id="confirmPassword" onblur="validatePassword()">
+									</div>
+
+									<div id="buttonWrapper">
+									 <input type="button" value="Register" id="registerButtonForm">
+									</div>
+
+								</form>
+
+							</div>
+
+							<div id = "orDivision">
+								<img src="../assets/images/horiz_sep.png">
+							</div>
+
+							<span id="signInWith">Sign in with social networks</span>
+
+							<div id="socialNetworkLinks">
+								<img src="../assets/images/gplus.png" id="gplusImg">
+								<img src="../assets/images/fb.png" id="fbImg">
+								<img src="../assets/images/twitter.png" id="twitterImg">
+							</div>
+
+							<div id="termsAndPolicyText">
+								<span id="lighterText">By signing up, you agree to our</span><br><span id="darkerText">Terms of Service</span><span id="lighterText"> and </span><span id="darkerText">Privacy Policy.</span>
+							</div>
+
+						</div>
+
+					</div>
+						
+				</div>
+
+			</div>
+
+		</div>
+
+		<footer id="footer">
+
+			<div id="footerContent">
+
+				<div id="footerLinks">
+
+					<div id="upperLine">
+						<span>About Us</span>
+						<span>Privacy Policy</span>
+						<span>Terms &#38; Conditions</span>
+					</div>
+
+					<div id="lowerLine">
+						<span>&copy; &nbsp;Fixapp LLC</span>
+						<span>All rights Reserved</span>
+					</div>
+
+				</div>
+
+				<div id="followUsOn">
+					<span>Follow Us on</span>
+					<i class="icon-facebook"></i>
+					<i class="icon-twitter"></i>
+					<i class="icon-gplus"></i>
+				</div>
+
+			</div>
+
+		</footer>
+
+
+	</body>
+
+</html>
+
